@@ -243,6 +243,7 @@ function buildRow(documentRef, key) {
   row.className = 'key-setup-row';
   row.dataset.keyId = key.id;
   row.dataset.set = String(Boolean(key.set));
+  row.dataset.available = String(Boolean(key.available));
   if (key.managed) row.dataset.managed = key.managed;
   const external = key.managed === 'external';
 

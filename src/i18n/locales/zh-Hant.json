@@ -2736,7 +2736,7 @@
   "Begin with a clean globe": "從空白地球開始",
   "Don't show this again": "不再顯示",
   "ESC to dismiss": "按 ESC 關閉",
-  "Tip: the GEV MIC button in the dock lets you talk to the map.": "提示：可通過停靠欄中的 GEV 麥克風按鈕用語音操控地圖。",
+  "Tip: the ATLAS MIC button in the dock lets you talk to the map.": "提示：可通過停靠欄中的 ATLAS MIC 按鈕用語音操控地圖。",
   "hemisphere|N": "N",
   "hemisphere|S": "S",
   "hemisphere|E": "E",
@@ -2874,5 +2874,6 @@
   "south": "南部",
   "south-east": "東南部",
   "{percent}% changed · strongest change {hotspot} · {area} hectares": "變化 {percent}% · 最強變化位於{hotspot} · {area} 公頃",
-  "Imagery unavailable ({status})": "影像不可用（{status}）"
+  "Imagery unavailable ({status})": "影像不可用（{status}）",
+  "El Jadida": "傑迪代"
 }

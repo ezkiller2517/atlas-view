@@ -2995,7 +2995,7 @@
   "Begin with a clean globe": "Commencer avec un globe vierge",
   "Don't show this again": "Ne plus afficher",
   "ESC to dismiss": "ESC pour fermer",
-  "Tip: the GEV MIC button in the dock lets you talk to the map.": "Astuce : le bouton GEV MIC du dock permet de parler à la carte.",
+  "Tip: the ATLAS MIC button in the dock lets you talk to the map.": "Astuce : le bouton ATLAS MIC du dock permet de parler à la carte.",
   "Malformed cyclone snapshot": "Instantané cyclonique mal formé",
   "Cyclone request timed out": "Délai dépassé pour la requête cyclonique",
   "Pin two imagery days in A / B first": "Épinglez d’abord deux jours d’images en A / B",
@@ -3014,5 +3014,6 @@
   "south": "sud",
   "south-east": "sud-est",
   "{percent}% changed · strongest change {hotspot} · {area} hectares": "{percent} % modifié · changement le plus marqué au {hotspot} · {area} hectares",
-  "Imagery unavailable ({status})": "Images indisponibles ({status})"
+  "Imagery unavailable ({status})": "Images indisponibles ({status})",
+  "El Jadida": "El Jadida"
 }

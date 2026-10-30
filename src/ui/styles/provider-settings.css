@@ -206,7 +206,7 @@
   border-radius: 0.42rem;
 }
 
-.key-setup-row[data-set='true'] {
+.key-setup-row[data-available='true'] {
   background: rgba(30, 81, 57, 0.12);
   border-color: rgba(84, 227, 156, 0.32);
 }
@@ -232,7 +232,7 @@
   border-radius: 50%;
 }
 
-.key-setup-row[data-set='true'] .key-setup-led {
+.key-setup-row[data-available='true'] .key-setup-led {
   background: #54e39c;
   box-shadow: 0 0 0.5rem rgba(84, 227, 156, 0.66);
 }

@@ -64,7 +64,10 @@ test('the status payload reports presence without any credential material', () =
     // Secret missing: the OpenSky pair must read as NOT set.
   };
   const status = keySetupStatus(env);
-  assert.equal(status.total, KEY_SETUP_KEYS.filter((key) => !key.hidden).length);
+  assert.equal(
+    status.total,
+    KEY_SETUP_KEYS.filter((key) => !key.hidden && key.required !== false).length,
+  );
   const google = status.keys.find((key) => key.id === 'google-maps');
   assert.equal(google.set, true);
   const opensky = status.keys.find((key) => key.id === 'opensky');
@@ -81,6 +84,20 @@ test('the status payload reports presence without any credential material', () =
 test('whitespace-only env values do not count as configured', () => {
   const status = keySetupStatus({ OPENAI_API_KEY: '   ' });
   assert.equal(status.keys.find((key) => key.id === 'openai').set, false);
+});
+
+test('OpenSky reports anonymous availability without pretending OAuth is configured', () => {
+  const status = keySetupStatus({});
+  const opensky = status.keys.find((key) => key.id === 'opensky');
+  assert.equal(opensky.set, false);
+  assert.equal(opensky.availableWithoutKey, true);
+  assert.equal(opensky.available, true);
+  assert.equal(opensky.required, false);
+  assert.equal(
+    status.total,
+    status.keys.filter((key) => key.required).length,
+    'optional OpenSky OAuth must not count as a waiting key',
+  );
 });
 
 test('subprocess success requires a clean zero exit', () => {

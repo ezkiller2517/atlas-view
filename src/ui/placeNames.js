@@ -24,6 +24,7 @@ const PLACE_NAME_KEYS = new Map(
     msg('Paris'),
     msg('Dubai'),
     msg('Washington DC'),
+    msg('El Jadida'),
     msg('Tallinn'),
     msg('Los Angeles'),
   ].map((key) => [key, key]),

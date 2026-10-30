@@ -113,6 +113,8 @@ export const KEY_SETUP_KEYS = Object.freeze([
     getUrl: 'https://opensky-network.org',
     envVars: Object.freeze(['OPENSKY_CLIENT_ID', 'OPENSKY_CLIENT_SECRET']),
     tier: 'free',
+    availableWithoutKey: true,
+    required: false,
   }),
   Object.freeze({
     id: 'mapillary',
@@ -483,13 +485,16 @@ export function keySetupStatus(env = {}) {
       envVars: [...entry.envVars],
       tier: entry.tier,
       clientExposed: Boolean(entry.clientExposed),
+      availableWithoutKey: Boolean(entry.availableWithoutKey),
+      available: set || Boolean(entry.availableWithoutKey),
+      required: entry.required !== false,
       set,
     };
   });
   return {
     keys,
-    setCount: keys.filter((key) => key.set).length,
-    total: keys.length,
+    setCount: keys.filter((key) => key.required && key.set).length,
+    total: keys.filter((key) => key.required).length,
   };
 }
 

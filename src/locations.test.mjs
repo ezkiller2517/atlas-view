@@ -21,6 +21,25 @@ import {
   GLOBE_VIEW,
   searchAndFlyTo,
 } from './locations.js';
+import { CITY_POIS } from './cityPois.js';
+
+test('WEST / El Jadida is a curated preset with the original camera pose', () => {
+  const city = CITY_POIS.eljadida;
+  assert.equal(city.name, 'El Jadida');
+  assert.deepEqual(city.viewBounds, {
+    southwest: { lat: 33.18, lng: -8.58 },
+    northeast: { lat: 33.3, lng: -8.42 },
+  });
+  assert.deepEqual(city.pois[0], {
+    name: 'WEST / Hay Essalam',
+    lat: 33.22547,
+    lon: -8.49995,
+    alt: 900,
+    pitch: -30,
+    heading: 160,
+    buildingHeight: 20,
+  });
+});
 
 function stubViewer() {
   const flights = [];

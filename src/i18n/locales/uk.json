@@ -3065,7 +3065,7 @@
   "Begin with a clean globe": "Почніть із чистого глобуса",
   "Don't show this again": "Більше не показувати",
   "ESC to dismiss": "ESC — приховати",
-  "Tip: the GEV MIC button in the dock lets you talk to the map.": "Порада: кнопка МІК у доку дає змогу говорити з картою.",
+  "Tip: the ATLAS MIC button in the dock lets you talk to the map.": "Порада: кнопка ATLAS MIC у доку дає змогу говорити з картою.",
   "Malformed cyclone snapshot": "Некоректний знімок циклонів",
   "Cyclone request timed out": "Минув час очікування запиту циклонів",
   "Pin two imagery days in A / B first": "Спочатку закріпіть два дні знімків як A / B",
@@ -3084,5 +3084,6 @@
   "south": "південь",
   "south-east": "південний схід",
   "{percent}% changed · strongest change {hotspot} · {area} hectares": "Змінено {percent}% · найсильніша зміна: {hotspot} · {area} гектарів",
-  "Imagery unavailable ({status})": "Знімки недоступні ({status})"
+  "Imagery unavailable ({status})": "Знімки недоступні ({status})",
+  "El Jadida": "Ель-Джадіда"
 }

@@ -2997,7 +2997,7 @@
   "Begin with a clean globe": "Comece com um globo limpo",
   "Don't show this again": "Não mostrar novamente",
   "ESC to dismiss": "ESC para fechar",
-  "Tip: the GEV MIC button in the dock lets you talk to the map.": "Dica: o botão GEV MIC no dock permite falar com o mapa.",
+  "Tip: the ATLAS MIC button in the dock lets you talk to the map.": "Dica: o botão ATLAS MIC no dock permite falar com o mapa.",
   "Pin two imagery days in A / B first": "Primeiro fixe dois dias de imagens como A / B",
   "Image comparison unavailable": "Comparação de imagens indisponível",
   "The imagery frames have different sizes": "As imagens têm tamanhos diferentes",
@@ -3014,5 +3014,6 @@
   "south": "sul",
   "south-east": "sudeste",
   "{percent}% changed · strongest change {hotspot} · {area} hectares": "{percent}% alterado · mudança mais intensa a {hotspot} · {area} hectares",
-  "Imagery unavailable ({status})": "Imagens indisponíveis ({status})"
+  "Imagery unavailable ({status})": "Imagens indisponíveis ({status})",
+  "El Jadida": "El Jadida"
 }

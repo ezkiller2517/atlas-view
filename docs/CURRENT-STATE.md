@@ -1,4 +1,4 @@
-# God's Eye View Current State
+# Atlas View Current State
 
 Docker Compose mounts the checkout with the shared SELinux `:z` label so
 containers can read it on enforcing SELinux hosts. The separate image-owned
@@ -131,12 +131,12 @@ provider registration rejects compositions that cannot fit rather than truncatin
 identities. A malformed or duplicate entry invalidates the complete custom-switch
 field. Existing whole-link size limits still apply.
 
-## God's Eye View in conversations — October 2, 2026
+## Atlas View in conversations — October 2, 2026
 
-Tool answers that can be shown in God's Eye View include a view: camera, layers,
+Tool answers that can be shown in Atlas View include a view: camera, layers,
 style, map, marks and an aircraft or satellite to follow, written in the
 share-link format (`gods-eye-view/view`). `show_in_gods_eye_view` shows a view as live
-God's Eye View inside clients that display MCP Apps, and as a link everywhere.
+Atlas View inside clients that display MCP Apps, and as a link everywhere.
 The panel runs the app's panel build (`npm run build:panel`, served at
 `/panel/`) and loads it, with its data, through the MCP server, so it works
 in Claude Desktop and in the Codex and ChatGPT desktop apps with a local
@@ -5199,7 +5199,7 @@ and unreachable upstream (502/504) separately from road geometry.
 
 ### Voice Control (June 2026)
 
-`GEV MIC` button (bottom UI) starts an OpenAI Realtime session over WebRTC:
+`ATLAS MIC` button (bottom UI) starts an OpenAI Realtime session over WebRTC:
 
 - **Token flow**: browser fetches a short-lived client secret from `/api/realtime/token`; the Vite middleware uses `OPENAI_API_KEY` by default, or the signed-in local ChatGPT/Codex OAuth access token when OAuth was explicitly selected in Provider Settings, and posts the full session config (instructions, tool schemas, VAD, truncation) to `api.openai.com/v1/realtime/client_secrets`. Both long-lived credentials stay server-side; OAuth minting is loopback-only. SDP exchange goes directly to `api.openai.com/v1/realtime/calls` with the ephemeral token.
 - **Session defaults** (env-tunable): model `gpt-realtime-2` (or `gpt-realtime-2.1-mini` when the MINI tier is selected — see the model-tier entry below), voice `marin`, reasoning effort `low`, semantic VAD with low eagerness, no response interruption, context window truncated to ~3,000 post-instruction tokens with 0.5 retention ratio — the conversational window stays short because map state is fetched live per turn.
@@ -5547,7 +5547,7 @@ apply to `public/` assets or built-preview serving.
 - A successful Pinokio install writes the owner-only `pinokio/.installed`
   marker. The nested launcher menu resolves that marker from its own directory:
   an absent marker exposes Install, a present marker exposes Start, and a
-  running server with a captured ready URL exposes Open God's Eye View. That
+  running server with a captured ready URL exposes Open Atlas View. That
   default item uses Pinokio's `popout` option to open the system browser; the
   Server item retains the launcher console. The app's framing headers stay
   unchanged. This does not assume all Pinokio desktop versions enforce those
@@ -5593,7 +5593,7 @@ apply to `public/` assets or built-preview serving.
 - Panel POSITION keys are versioned `v8` (`godsEyeView.v8.panelPos.<id>`); collapsed-state keys remain `v6`. The one-time position reset clears stale DISPLAY placements that could overlap the Context rail.
 - Map Source lives in the bottom Visual Presets tray. The left accordion contains no MAP STACK panel, and the `k` panel token that addressed it is gone from the share registry, so legacy `ui=k...` state takes the ordinary unknown-token skip.
 - A dock popover (Visual Presets, Location) auto-dismisses on mouse-away unless pinned. Focus inside the tray defers that dismissal only when the browser reports `:focus-visible` — keyboard focus and typed-into fields hold the tray open; a mouse-clicked tile does not, because Chromium focuses a `<button>` on press.
-- GEV MIC control is a glass capsule (var(--glass-bg), blur(24px) saturate(1.4), 999px radius; panel radius in error state).
+- ATLAS MIC control is a glass capsule (var(--glass-bg), blur(24px) saturate(1.4), 999px radius; panel radius in error state).
 - The desktop right rail (`#right-context-rail`) owns `DISPLAY`, `CCTV`, its active parameter controls, and `GLOBAL CONTEXT` as one fixed responsive stack in that order. Its compact buttons use the same 176 px width as the left accordion and one consistent 50 px height, share the left stack's 52 px edge inset and measured top baseline across HUD variants, then constrain themselves against visible HUD/chrome rectangles and the remaining vertical corridor. `DISPLAY` is no longer draggable and legacy saved coordinates are ignored.
 - The right rail is labeled **DISPLAY** (formerly "MOVE") and groups, in order, HUD, DETECT, Bloom, Sharpen, 3D, Clean-UI (HUD + DETECT promoted to the top). Its expanded controls retain the same compact 176 px width as the right-side tabs instead of growing to the wider Context detail-card width. It starts expanded on first run and respects the user's later `v6` collapse choice. Collapses/expands with directional chevrons (`◀` collapsed, `▶` expanded).
 - Display and Context use matching 330 px expanded widths and matching compact tab dimensions. The parameter panel is part of Display's expanded content. DISPLAY may remain open beside one contextual panel; CCTV and Context are mutually exclusive. In Tactical HUD, expanding CCTV or Context hides the other contextual launcher while DISPLAY remains independently available. The most recently opened right-rail panel owns the constrained lane even when it appears later in DOM order; passive restoration and automatic disclosure do not replace that explicit owner. Minimal and other HUD layouts retain the collapsed launchers; when their active panel exceeds the measured corridor, the rail reserves sibling heights and gaps and scrolls the active panel internally.

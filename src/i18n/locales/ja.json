@@ -2853,7 +2853,7 @@
   "Begin with a clean globe": "まっさらな地球儀から始める",
   "Don't show this again": "今後表示しない",
   "ESC to dismiss": "Escで閉じる",
-  "Tip: the GEV MIC button in the dock lets you talk to the map.": "ヒント：ドックの［マイク］ボタンで地図に話しかけられます。",
+  "Tip: the ATLAS MIC button in the dock lets you talk to the map.": "ヒント：ドックの［ATLAS MIC］ボタンで地図に話しかけられます。",
   "routing busy — too many routes at once": "ルート検索サービスが混雑しています。同時に要求されたルートが多すぎます",
   "route proxy error": "ルート検索プロキシでエラーが発生しました",
   "Malformed cyclone snapshot": "サイクロンのスナップショットの形式が不正です",
@@ -2874,5 +2874,6 @@
   "south": "南部",
   "south-east": "南東部",
   "{percent}% changed · strongest change {hotspot} · {area} hectares": "{percent}%変化 · 最大の変化は{hotspot} · {area}ヘクタール",
-  "Imagery unavailable ({status})": "画像を利用できません（{status}）"
+  "Imagery unavailable ({status})": "画像を利用できません（{status}）",
+  "El Jadida": "アル・ジャディーダ"
 }
